@@ -1,0 +1,27 @@
+{
+  "name": "typescript-setup",
+  "version": "1.0.0",
+  "author": "Ryan Bucshon <busheezy@gmail.com>",
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "dev": "ts-node-dev --respawn ./src/index.ts"
+  },
+  "dependencies": {
+    "@types/app-root-path": "^1.2.4",
+    "@types/debug": "^0.0.30",
+    "@types/jsonfile": "^4.0.1",
+    "@types/lodash": "^4.14.94",
+    "app-root-path": "^2.0.1",
+    "debug": "^3.1.0",
+    "eris": "^0.8.3",
+    "jsonfile": "^4.0.0",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "ts-node": "^4.1.0",
+    "ts-node-dev": "^1.0.0-pre.8",
+    "tslint": "^5.9.1",
+    "tslint-config-airbnb": "^5.4.2",
+    "typescript": "^2.6.2"
+  }
+}
