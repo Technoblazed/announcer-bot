@@ -26,7 +26,7 @@ bot.on('ready', () => {
 });
 
 bot.on('presenceUpdate', (member, priorPresence) => {
-  if (process.env.debug === 'discord') {
+  if ((process.env.debug === 'discord') || ((process.env.debug === '*'))) {
     log(`game: ${(_.has(member, 'game')) ? JSON.stringify(member.game) : 'none'}`);
     log(`status: ${member.status || 'none'}`);
   }
