@@ -12,11 +12,11 @@ const appRootPath = appRootPathLib.toString();
 const configPath = path.join(appRootPath, 'config', 'discord.json');
 const config = jsonfile.readFileSync(configPath);
 
-const bot = new Eris(config.token);
+const bot = new Eris.Client(config.token);
 
-const timeout = {};
+const timeout: any = {};
 
-function isTwitchUrl(url) {
+function isTwitchUrl(url: string) {
   const parsedURL = new URL(url);
   return (parsedURL.host === 'www.twitch.tv');
 }
@@ -25,7 +25,7 @@ bot.on('ready', () => {
   console.log('Ready!');
 });
 
-bot.on('presenceUpdate', (member, priorPresence) => {
+bot.on('presenceUpdate', (member: any, priorPresence: any) => {
   if (member.roles.includes(config.roleId) === false) {
     return log('does not have streamer role');
   }
